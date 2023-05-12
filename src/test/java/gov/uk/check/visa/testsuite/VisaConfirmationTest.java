@@ -29,7 +29,7 @@ public class VisaConfirmationTest extends BaseTest {
         workTypePage = new WorkTypePage();
     }
 
-    @Test
+    @Test(groups = {"smoke", "sanity", "regression"})
     public void anAustralianCominToUKForTourism(){
         startPage.clickStartNow();
         selectNationalityPage.selectNationality("Australia");
@@ -39,7 +39,7 @@ public class VisaConfirmationTest extends BaseTest {
         resultPage.confirmResultMessage("You will not need a visa to come to the UK");
     }
 
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void aChileanComingToTheUKForWorkAndPlansOnStayingForLongerThanSixMonths(){
         startPage.clickStartNow();
         selectNationalityPage.selectNationality("Chile");
@@ -53,7 +53,7 @@ public class VisaConfirmationTest extends BaseTest {
         resultPage.confirmResultMessage("You need a visa to work in health and care");
     }
 
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void aColumbianNationalComingToTheUKToJoinAPartnerForALongStayTheyDoHaveAnArticle10Or20Card(){
         startPage.clickStartNow();
         selectNationalityPage.selectNationality("Colombia");
